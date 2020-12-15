@@ -9,7 +9,7 @@ public class Cat extends Animal{
     public Cat() {
         rnd = new Random();
         this.RUN_DISTANCE = rnd.nextInt(150) + 100;
-        this.JUMP_HEIGHT = (double)(rnd.nextInt(2) + 1) / 10;
+        this.JUMP_HEIGHT = (double)(rnd.nextInt(1) + 2);
     }
 
     @Override
@@ -33,6 +33,10 @@ public class Cat extends Animal{
         } else {
             System.out.printf("%s jump (%.1f): true%n", this, height);
         }
+    }
+
+    public void catInfo() {
+        System.out.printf("Кот%nБег: %d%nПрыжок: %.1f%n", RUN_DISTANCE, JUMP_HEIGHT);
     }
 
     @Override

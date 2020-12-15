@@ -8,7 +8,7 @@ public class Dog extends Animal {
     public Dog() {
         rnd = new Random();
         this.RUN_DISTANCE = rnd.nextInt(300) + 200;
-        this.JUMP_HEIGHT = (double)(rnd.nextInt(3) + 2) / 10;
+        this.JUMP_HEIGHT = (double)(rnd.nextInt(1) + 4) / 10;
         this.SWIM_DISTANCE = rnd.nextInt(5) + 5;
     }
 
@@ -39,6 +39,10 @@ public class Dog extends Animal {
         } else {
             System.out.printf("%s jump (%.1f): true%n", this, height);
         }
+    }
+
+    public void dogInfo() {
+        System.out.printf("Собака%nБег: %d%nПрыжок: %.1f%nПлавание: %d%n", RUN_DISTANCE, JUMP_HEIGHT, SWIM_DISTANCE);
     }
 
     @Override
